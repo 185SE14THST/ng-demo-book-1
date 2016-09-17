@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Application Requirements -->
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    
+</head>
+<body ng-controller="mainController">
+
+<div class="container">
+  <h1>Application</h1>
+  <div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Process Book Donations</h3>		
+            <div class="list-group">
+                <input type="text" size="19" name="newBook" placeholder="Title" ng-model="newTitle">
+                <input type="text" size="10" name="newBook" placeholder="ISBN" ng-model="newISBN">
+                <input type="text" size="5" name="newBook" placeholder="Price" ng-model="newPrice">
+                <input type="text" size="12" name="newBook" placeholder="Publisher" ng-model="newPublisher">
+                <input type="text" size="12" name="newBook" placeholder="PublisherYear" ng-model="newPublisherYear">
+                <a href="#" class="btn btn-default" ng-click="addRule()">Add Book Donation</a>
+                <hr>
+              	<!-- Application data: tag object to ng-repeat reference (=) -->
+              	<search-result book-object="book" ng-repeat="book in books"></search-result>
+            </div>
+    </div>
+  </div>
+</div>
+
+<!-- Application Configuration -->
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/routes.js"></script>
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/controllers.js"></script>
+    <script src="assets/js/directives.js"></script>
+
+<!-- Application Customizations -->    
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>
